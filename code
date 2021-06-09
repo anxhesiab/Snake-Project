@@ -7,5 +7,23 @@ delay= 0.1
 # Set up the screen
 snake= turtle.Screen()
 snake.title("Snake Game")
-snake.bgcolor("Blue")
-snake.setup(width=600, height=600)
+snake.bgcolor("Green")
+snake.setup(width=650, height=650)
+
+# Creating the snake head
+snake_head=turtle.Turtle()
+snake_head.speed(0)
+snake_head.shape("square")
+snake_head.coloer("blue")
+snake_head.penup()
+snake_head.goto(0,0)
+snake_head.direction="stop"
+
+#Creating the apple of for the snake
+apple=turtle.Turtle()
+apple.speed(0)
+apple.shape("circle")
+apple.color("red")
+apple.penup()
+apple.goto(0,100)
+segments=[]
