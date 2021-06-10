@@ -27,3 +27,15 @@ apple.color("red")
 apple.penup()
 apple.goto(0,100)
 segments=[]
+
+# tabel of scores
+score = 0
+highest_score = 0
+text = turtle.Turtle()
+text.speed(0)
+text.shape("square")
+text.color("white")
+text.penup()
+text.hideturtle()
+text.goto(0, 260)
+text.write("Score: 0 High Score: {}".format(highest_score), align="center", font=("Courier", 24, "normal"))
