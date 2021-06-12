@@ -80,3 +80,16 @@ snake.onkey(up, "w")
 snake.onkey(down, "s")
 snake.onkey(right, "d")
 snake.onkey(left, "a")
+
+# Increasing the score
+  score = score+10
+  if score > highest_score:
+    highest_score = score
+  segments = []
+  
+ # Reset score
+ score = 0
+  
+ # Update score
+ text.clear()
+ text.write("score: {} High Score: {}".format(score, highest_score), align="center", font=("Courier", 24, "normal"))
