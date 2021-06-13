@@ -93,3 +93,24 @@ snake.onkey(left, "a")
  # Update score
  text.clear()
  text.write("score: {} High Score: {}".format(score, highest_score), align="center", font=("Courier", 24, "normal"))
+
+# moving the apple to a random position on screen
+if snake_head.distance(apple) <15:
+  x = random(-290, 290)
+  y = random(-290, 290)
+  apple.goto(x, y)
+
+  
+  # Increase the score
+  score = score+10
+  if score > highest_score:
+    highest_score = score
+  segments = []
+
+# add a segment
+  segment = turtle.Turtle()
+  segment.speed(0)
+  segment.shape("square")
+  segment.color("grey")
+  segment.penup()
+  segments.append(segment)
