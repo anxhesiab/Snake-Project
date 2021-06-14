@@ -138,3 +138,17 @@ for segment in segments:
   segment.goto(1000, 1000) 
 # clear segment list
   segments = []
+
+
+# Check for snake_head collision
+for segment in segments:
+  if segment.distance(snake_head) < 20:
+    time.sleep(1)
+    snake_head.goto(0, 0)
+    snake_head.direction = "stop"
+# Hide the segments
+    for segment in segments:
+      segment.goto(1000, 1000)
+ 
+# clear segment list
+      segment.clear()
